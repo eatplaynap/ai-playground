@@ -11,5 +11,18 @@
   },
   "dependencies": {
     "@google/genai": "^1.7.0"
-  }
+  },
+  "description": "",
+  "main": "dist/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eatplaynap/ai-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eatplaynap/ai-playground/issues"
+  },
+  "homepage": "https://github.com/eatplaynap/ai-playground#readme"
 }
