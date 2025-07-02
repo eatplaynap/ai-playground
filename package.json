@@ -3,16 +3,17 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node --no-warnings --env-file=.env --loader ts-node/esm src/main.ts"
   },
   "devDependencies": {
     "@types/node": "^24.0.8",
     "prettier": "^3.3.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@google/genai": "^1.7.0",
-    "dotenv": "^17.0.0"
+    "@google/genai": "^1.7.0"
   },
   "description": "",
   "main": "dist/main.js",
