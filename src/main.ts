@@ -1,6 +1,6 @@
-import { GoogleGenAI } from '@google/genai'
-import * as readline from 'node:readline/promises'
 import { stdin as input, stdout as output } from 'node:process'
+import * as readline from 'node:readline/promises'
+import { GoogleGenAI } from '@google/genai'
 
 const apiKey = process.env.GOOGLE_API_KEY
 const ai = new GoogleGenAI({ apiKey })
