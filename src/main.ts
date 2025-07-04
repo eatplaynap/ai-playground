@@ -7,7 +7,7 @@ const ai = new GoogleGenAI({ apiKey })
 
 const rl = readline.createInterface({ input, output })
 
-const answer = await rl.question('What do you want to know?')
+const answer = await rl.question('あなたの愚痴を聞かせてください🥹')
 
 async function main() {
   const response = await ai.models.generateContent({
@@ -49,6 +49,7 @@ ${answer}
     },
   })
   console.log(response.text)
+  rl.close()
 }
 
 await main()
