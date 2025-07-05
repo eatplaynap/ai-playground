@@ -10,7 +10,7 @@ const rl = readline.createInterface({ input, output })
 const answer = await rl.question('あなたの愚痴を聞かせてください🥹')
 
 async function main() {
-  const response = await ai.models.generateContent({
+  const response = await ai.models.generateContentStream({
     model: 'gemini-2.5-flash',
     contents: answer,
     config: {
@@ -48,7 +48,9 @@ ${answer}
 `,
     },
   })
-  console.log(response.text)
+  for await (const chunk of response) {
+    console.log(chunk.text)
+  }
   rl.close()
 }
 
