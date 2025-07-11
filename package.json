@@ -1,10 +1,10 @@
 {
-  "name": "ai-playground",
+  "name": "rage-to-comedy",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node --no-warnings --env-file=.env --loader ts-node/esm src/main.ts"
+    "start": "node --no-warnings --loader ts-node/esm src/main.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "2.0.6",
@@ -20,13 +20,13 @@
   "main": "dist/main.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eatplaynap/ai-playground.git"
+    "url": "git+https://github.com/eatplaynap/rage-to-comedy.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/eatplaynap/ai-playground/issues"
+    "url": "https://github.com/eatplaynap/rage-to-comedy/issues"
   },
-  "homepage": "https://github.com/eatplaynap/ai-playground#readme"
+  "homepage": "https://github.com/eatplaynap/rage-to-comedy#readme"
 }
