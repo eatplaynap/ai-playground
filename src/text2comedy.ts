@@ -4,6 +4,9 @@ const apiKey = process.env.GOOGLE_API_KEY
 const ai = new GoogleGenAI({ apiKey })
 
 export const text2comedy = async (text: string) => {
+  if (!apiKey) {
+    throw new Error('APIキーを設定してください')
+  }
   const response = await ai.models.generateContentStream({
     model: 'gemini-2.5-flash',
     contents: text,
