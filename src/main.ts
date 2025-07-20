@@ -11,7 +11,12 @@ const answer = await rl.question('あなたの愚痴を聞かせてください�
 
 async function main() {
   await text2comedy(answer)
-  rl.close()
+    .catch((error) => {
+      console.log(error.message)
+    })
+    .finally(() => {
+      rl.close()
+    })
 }
 
 await main()
