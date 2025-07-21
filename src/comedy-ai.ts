@@ -10,6 +10,7 @@ export const checkApiKey = () => {
 }
 
 export const text2comedy = async (text: string) => {
+  console.log('愚痴を聞かせてくれてありがとう。あなたのイライラをGeminiがおもしろシナリオにします！')
   const response = await ai.models.generateContentStream({
     model: 'gemini-2.5-flash',
     contents: text,
