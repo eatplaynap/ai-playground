@@ -1,6 +1,6 @@
 {
   "name": "rage-to-comedy",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "bin": {
     "rage-to-comedy": "dist/src/main.js"
   },
@@ -22,15 +22,15 @@
   "dependencies": {
     "@google/genai": "^1.7.0"
   },
-  "description": "",
+  "description": "イライラした出来事を入力すると、Geminiがおもしろシナリオに変換します",
   "main": "dist/main.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eatplaynap/rage-to-comedy.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["gemini", "comedy", "ai"],
+  "author": "eatplaynap",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/eatplaynap/rage-to-comedy/issues"
   },
