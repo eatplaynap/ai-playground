@@ -5,12 +5,16 @@ const ai = new GoogleGenAI({ apiKey })
 
 export const checkApiKey = () => {
   if (!apiKey) {
-    throw new Error('APIキーを環境変数として設定してください。\n設定方法: https://ai.google.dev/gemini-api/docs/api-key?hl=ja&_gl=1')
+    throw new Error(
+      'APIキーを環境変数として設定してください。\n設定方法: https://ai.google.dev/gemini-api/docs/api-key?hl=ja&_gl=1',
+    )
   }
 }
 
 export const text2comedy = async (text: string) => {
-  console.log('愚痴を聞かせてくれてありがとう。あなたのイライラをGeminiがおもしろシナリオにします！')
+  console.log(
+    '愚痴を聞かせてくれてありがとう。あなたのイライラをGeminiがおもしろシナリオにします！',
+  )
   const response = await ai.models.generateContentStream({
     model: 'gemini-2.5-flash',
     contents: text,
