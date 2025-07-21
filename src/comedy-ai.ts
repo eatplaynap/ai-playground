@@ -3,10 +3,13 @@ import { GoogleGenAI } from '@google/genai'
 const apiKey = process.env.GEMINI_API_KEY
 const ai = new GoogleGenAI({ apiKey })
 
-export const text2comedy = async (text: string) => {
+export const checkApiKey = () => {
   if (!apiKey) {
-    throw new Error('APIキーを設定してください')
+    throw new Error('APIキーを環境変数として設定してください。\n設定方法: https://ai.google.dev/gemini-api/docs/api-key?hl=ja&_gl=1')
   }
+}
+
+export const text2comedy = async (text: string) => {
   const response = await ai.models.generateContentStream({
     model: 'gemini-2.5-flash',
     contents: text,
