@@ -8,13 +8,11 @@ import { checkApiKey, text2comedy } from './comedy-ai.js'
 const rl = readline.createInterface({ input, output })
 
 async function main() {
-  // @ts-ignore
   try {
     checkApiKey()
     const answer = await rl.question('あなたの愚痴を聞かせてください🥹')
     await text2comedy(answer)
-  } catch (error) {
-    // @ts-ignore
+  } catch (error: any) {
     console.error(error.message)
   } finally {
     rl.close()
